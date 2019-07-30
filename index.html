@@ -8,21 +8,32 @@
 <body>
   <header id="header">
     <div class="logo-container">
-      <h1><img id="header-img" class="logo-class" src="../landingpage/NorthernWaxLogo.png"
-          alt="Northern Wax Logo image" /><em>Northern Wax Co.</em></h1>
+      <h1><img id="header-img" class="logo-class"
+          src="../landingpage/NorthernWaxLogo.png" /><em>Northern Wax Co.</em>
+      </h1>
     </div>
     <nav id="nav-bar" class="nav-container">
       <ul class="nav-list">
-        <li><a class="nav-link" href=""><strong>Link 1</strong></a></li>
-        <li><a class="nav-link" href=""><strong>Link 2</strong></a></li>
-        <li><a class="nav-link" href=""><strong>Link 3</strong></a></li>
+        <li><a class="nav-link" href="#info-section"><strong>Form</strong></a></li>
+        <li><a class="nav-link" href="#product-video"><strong>Product Video</strong></a></li>
+        <li><a class="nav-link" href="#pricing-section"><strong>Pricing</strong></a></li>
       </ul>
     </nav>
   </header>
   <main class="section-container">
     <div id="info-section">
-      <h2 id="wax-heading">Wax seals are the way to add a unique style to your envelopes</h2>
-      <div id="email-heading"><label for="email-input">Email us for more info: </label><input id="email-input" type="email" placeholder="Email..."/></div>
+      <h2 id="wax-heading">Wax seals are the way to add a unique style to your envelopes!</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input id="email" name="email" type="email" placeholder="Email..." required />
+        <input id="submit" type="submit" value="Get More Info">
+      </form>
+    </div>
+    <div id="product-video">
+      <iframe id="video" src="https://www.youtube.com/embed/OED1zlQ_dI0?autoplay=1" width="840" height="630">
+      </iframe>
+    </div>
+    <div id="pricing-section">
+
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </main>
@@ -31,13 +42,39 @@
       font-family: 'Trebuchet MS', Sans-Serif;
     }
 
+    #product-video {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      align-self: center;
+    }
+
+    #form {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+
     #nav-bar {
       width: 50%;
       align-self: center;
     }
 
-    #email-input {
+    #email {
+      align-self: center;
+      text-align: center;
       width: 200px;
+    }
+
+    #submit {
+      margin-top: 10px;
+      align-self: center;
+      width: 100px;
+      height: 30px;
+      background-color: maroon;
+      color: white;
+      border: none;
+      border-radius: 6px;
     }
 
     .section-container {
@@ -45,9 +82,8 @@
       flex-direction: column;
       align-content: center;
       width: 80%;
-      margin: 0px 100px 0px 100px;
-      min-width: 1000px;
-    }    
+      margin: 100px 100px 0px 100px;
+    }
 
     .nav-list {
       list-style: none;
@@ -79,7 +115,7 @@
 
     header {
       display: flex;
-      position: relative;
+      position: fixed;
       top: 0px;
       left: 0px;
       background-color: lightblue;
@@ -87,11 +123,20 @@
     }
 
     li {
-      width: 100px;
+      width: 150px;
       text-align: center;
     }
-    h2, h3 {
+
+    h2,
+    h3 {
       text-align: center;
+    }
+
+    @media (max-width: 1100px) {
+      iframe {
+        width: 420px;
+        height: 315px;
+      }
     }
   </style>
 </body>

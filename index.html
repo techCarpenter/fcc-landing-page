@@ -7,20 +7,23 @@
 
 <body>
   <header id="header">
-      <div class="logo-container">
-        <h1><img id="header-img" class="logo-class" src="../landingpage/NorthernWaxLogo.png"
-            alt="Northern Wax Logo image" /><em>Northern Wax Co.</em></h1>
-      </div>
-      <nav id="nav-bar" class="nav-container">
-        <ul class="nav-list">
-            <li><a class="nav-link" href=""><strong>Link 1</strong></a></li>
-            <li><a class="nav-link" href=""><strong>Link 2</strong></a></li>
-            <li><a class="nav-link" href=""><strong>Link 3</strong></a></li>
-        </ul>
-      </nav>
+    <div class="logo-container">
+      <h1><img id="header-img" class="logo-class" src="../landingpage/NorthernWaxLogo.png"
+          alt="Northern Wax Logo image" /><em>Northern Wax Co.</em></h1>
+    </div>
+    <nav id="nav-bar" class="nav-container">
+      <ul class="nav-list">
+        <li><a class="nav-link" href=""><strong>Link 1</strong></a></li>
+        <li><a class="nav-link" href=""><strong>Link 2</strong></a></li>
+        <li><a class="nav-link" href=""><strong>Link 3</strong></a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-
+  <main class="section-container">
+    <div id="info-section">
+      <h2 id="wax-heading">Wax seals are the way to add a unique style to your envelopes</h2>
+      <div id="email-heading"><label for="email-input">Email us for more info: </label><input id="email-input" type="email" placeholder="Email..."/></div>
+    </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </main>
   <style>
@@ -32,6 +35,20 @@
       width: 50%;
       align-self: center;
     }
+
+    #email-input {
+      width: 200px;
+    }
+
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      width: 80%;
+      margin: 0px 100px 0px 100px;
+      min-width: 1000px;
+    }    
+
     .nav-list {
       list-style: none;
       display: flex;
@@ -40,6 +57,13 @@
 
     .nav-link {
       /* TODO fill in formatting */
+    }
+
+    .info-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logo-container {
@@ -52,16 +76,21 @@
       height: 50px;
       vertical-align: middle;
     }
+
     header {
       display: flex;
-      position: fixed;
+      position: relative;
       top: 0px;
       left: 0px;
       background-color: lightblue;
       width: 100%;
     }
+
     li {
       width: 100px;
+      text-align: center;
+    }
+    h2, h3 {
       text-align: center;
     }
   </style>
